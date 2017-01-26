@@ -1,0 +1,15 @@
+{
+  "name": "palfinder",
+  "version": "1.0.0",
+  "description": "Geo Location App",
+  "main": "geoLocation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mascarpone Group at Hack Reactor (HR53)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.7.2"
+  }
+}
