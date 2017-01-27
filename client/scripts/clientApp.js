@@ -50,7 +50,7 @@ palFinder.controller('palFinderCtrl', ['$scope', '$window', '$http', function($s
   var repeatedlySendLocationData = function () {
     $http({
       method: 'POST',
-      url: 'https://127.0.0.1:8001/',
+      url: 'https://127.0.0.1:8001/', //change this to local or deployed IP
       data: {
         'lat': $window.pos.lat,
         'lng': $window.pos.lng
