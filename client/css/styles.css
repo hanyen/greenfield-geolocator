@@ -1,0 +1,13 @@
+#map {
+  height: 700px;
+  width: 700px;
+  margin: 0 auto;
+}
+      /* Optional: Makes the sample page fill the window. */
+/*html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  http://stackoverflow.com/questions/32928684/google-maps-height-100-of-div-parent
+}*/
