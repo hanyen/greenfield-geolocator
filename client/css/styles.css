@@ -1,13 +1,39 @@
-#map {
+/*#map {
   height: 700px;
   width: 700px;
   margin: 0 auto;
-}
-      /* Optional: Makes the sample page fill the window. */
-/*html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-
-  http://stackoverflow.com/questions/32928684/google-maps-height-100-of-div-parent
 }*/
+      /* Optional: Makes the sample page fill the window. */
+
+/*http://stackoverflow.com/questions/32928684/google-maps-height-100-of-div-parent*/
+html, body {   
+  height:100%; 
+  width:100%;
+  margin:0;
+}
+  
+/*http://stackoverflow.com/questions/19393264/why-does-bootstrap-3-force-the-container-width-to-certain-sizes*/
+.container { 
+  width: auto; 
+}
+
+
+/*<!-- Make the panel transparent http://stackoverflow.com/questions/24855438/transparent-bootstrap-panel -->*/
+
+.panel {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.panel-transparent {
+    background: none;
+}
+
+.panel-transparent .panel-body{
+    /*background:  !important;*/
+}
+
+
+/*http://www.iconarchive.com/show/bubble-circle-2-icons-by-scafer31000/Message-icon.html*/

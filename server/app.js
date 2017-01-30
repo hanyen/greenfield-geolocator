@@ -19,6 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use('/bower_components', express.static(path.join(__dirname, '/../client/bower_components')));
 app.use('/css', express.static(path.join(__dirname, '/../client/css')));
 app.use('/scripts', express.static(path.join(__dirname, '/../client/scripts')));
+app.use('/partials', express.static(path.join(__dirname + '/../client/partials')));
+app.use('/images', express.static(path.join(__dirname + '/../client/images')));
 
 app.get('/', function(req,res) {
   console.log('serving request ' + req.method + ' at ' + req.url);
@@ -30,6 +32,11 @@ app.post('/', function(req,res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.statusCode = 204;
   res.end();
+});
+
+app.get('/signup', function(req,res) {
+  console.log('serving request ' + req.method + ' at ' + req.url);
+  res.sendFile(path.join(__dirname + '/../client/index.html'));
 });
 
 var server = https.createServer(options, app);

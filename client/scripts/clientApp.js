@@ -4,6 +4,10 @@ var hanyenPosition = {
   lng: -122.409
 };
 
+//need to set the zoom value so that all users are visible
+//remove map/statelite, zoom, and the streetview buttons
+
+
 function initMap() {
   window.map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 37.7836786, lng: -122.409105},
@@ -43,7 +47,33 @@ setInterval(function(){
 }, 1000);
 
 
-var palFinder = angular.module('palFinder', []);
+var palFinder = angular.module('palFinder', ['ngRoute']);
+
+palFinder.config(function($routeProvider, $locationProvider){
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
+
+  $routeProvider
+  .when('/', {
+      templateUrl: '../partials/pinButtons.html',
+      controller: 'palFinderCtrl',
+    })
+    .when('/logout', {
+      templateUrl: '../partials/logout.html',
+      controller: 'palFinderCtrl'
+    })
+    .when('/myaccount', {
+      templateUrl: '../partials/myAccount.html',
+      controller: 'palFinderCtrl'
+    })
+    .when('/signup', {
+      templateUrl: '../partials/signup.html',
+      controller: 'palFinderCtrl'
+    })
+    .otherwise({redirectTo: '/'})
+});
 
 palFinder.controller('palFinderCtrl', ['$scope', '$window', '$http', function($scope, $window, $http) {
 
