@@ -35,5 +35,14 @@ html, body {
     /*background:  !important;*/
 }
 
+button {
+  background: transparent;
+  background-image: url(../images/icon-message.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100px;
+  width: 100px;
+  border: none;
+}
 
 /*http://www.iconarchive.com/show/bubble-circle-2-icons-by-scafer31000/Message-icon.html*/

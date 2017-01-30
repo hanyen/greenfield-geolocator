@@ -97,4 +97,9 @@ palFinder.controller('palFinderCtrl', ['$scope', '$window', '$http', function($s
         repeatedlySendLocationData();
       }
     }, 3000);
+
+    $scope.messageButtonClick = function() {
+      console.log('Message button is clicked');
+    };
+
 }]);
