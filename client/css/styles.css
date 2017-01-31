@@ -1,9 +1,10 @@
-/*#map {
-  height: 700px;
-  width: 700px;
-  margin: 0 auto;
-}*/
-      /* Optional: Makes the sample page fill the window. */
+#map {
+  height:100%; 
+  width: 100%; 
+  z-index: -1;
+}
+
+/* Makes the sample page fill the window. */
 
 /*http://stackoverflow.com/questions/32928684/google-maps-height-100-of-div-parent*/
 html, body {   
@@ -17,32 +18,31 @@ html, body {
   width: auto; 
 }
 
-
 /*<!-- Make the panel transparent http://stackoverflow.com/questions/24855438/transparent-bootstrap-panel -->*/
-
 .panel {
   position: absolute;
   bottom: 0;
   z-index: 1;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .panel-transparent {
     background: none;
 }
 
-.panel-transparent .panel-body{
-    /*background:  !important;*/
+.panel .panel-body {
+  text-align: center;
 }
 
+/*http://www.iconarchive.com/show/bubble-circle-2-icons-by-scafer31000/Message-icon.html*/
 button {
   background: transparent;
   background-image: url(../images/icon-message.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  margin: auto;
   height: 100px;
   width: 100px;
   border: none;
 }
-
-/*http://www.iconarchive.com/show/bubble-circle-2-icons-by-scafer31000/Message-icon.html*/
